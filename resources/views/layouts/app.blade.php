@@ -9,12 +9,18 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- ========== All CSS files linkup ========= -->
-    <link rel="stylesheet" href="{{ asset('css/lineicons.css') }}" />
+    <!--<link rel="stylesheet" href="{{ asset('css/lineicons.css') }}" /> -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+    <!-- Lineicons (ya lo tienes local, pero mejor CDN) -->
+    <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css">
+
     <script src="https://cdn.jsdelivr.net/npm/inferencejs@1.0.11"></script>
     @livewireStyles
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
-   <!-- @vite('resources/sass/app.scss') -->
+    <!-- @vite('resources/sass/app.scss') -->
 
     <style>
         :root {
@@ -499,6 +505,9 @@
     @livewireScripts
     <!-- @vite('resources/js/app.js') -->
     <script src="{{ asset('js/main.js') }}"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
     @stack('modals')
     @yield('scripts')
 </body>
