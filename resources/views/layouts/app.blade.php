@@ -12,7 +12,9 @@
     <link rel="stylesheet" href="{{ asset('css/lineicons.css') }}" />
     <script src="https://cdn.jsdelivr.net/npm/inferencejs@1.0.11"></script>
     @livewireStyles
-    @vite('resources/sass/app.scss')
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+
+   <!-- @vite('resources/sass/app.scss') -->
 
     <style>
         :root {
@@ -495,7 +497,7 @@
 
     <!-- ========= All Javascript files linkup ======== -->
     @livewireScripts
-    @vite('resources/js/app.js')
+    <!-- @vite('resources/js/app.js') -->
     <script src="{{ asset('js/main.js') }}"></script>
     @stack('modals')
     @yield('scripts')
